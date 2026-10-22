@@ -1,0 +1,19 @@
+{
+  "name": "Fire In Style",
+  "short_name": "Fire In Style",
+  "description": "Offline arcade battle royale survival game",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101820",
+  "theme_color": "#101820",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

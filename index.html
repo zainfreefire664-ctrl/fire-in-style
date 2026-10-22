@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#101820"><meta name="description" content="Fire In Style — offline arcade battle royale survival game.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>Fire In Style</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+<header class="topbar"><div class="brand"><span class="flame">🔥</span><div><b>FIRE IN STYLE</b><small>LAST PLAYER STANDING</small></div></div><div class="topstats"><span>⭐ <b id="coins">0</b></span><span>🏆 <b id="wins">0</b></span><button id="soundBtn" aria-label="Toggle sound">🔊</button></div></header>
+<main>
+<section id="home" class="screen active">
+<div class="hero"><div class="eyebrow">OFFLINE SURVIVAL • SEASON 01</div><h1>DROP IN.<br><span>STAY ALIVE.</span></h1><p>A compact, original battle-royale arcade game. Survive the bots, stay inside the zone, and make every shot count.</p><div class="hero-art"><div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div><div class="fighter">✦</div><div class="hero-label">BATTLE ISLAND / 01</div></div><button id="playBtn" class="primary">▶ PLAY MATCH</button><div class="home-actions"><button id="howBtn" class="secondary">HOW TO PLAY</button><button id="resetBtn" class="secondary">RESET SAVE</button></div><div class="save-note">Your coins, wins and best score save on this device.</div></div>
+</section>
+<section id="game" class="screen">
+<div class="hud"><div class="hud-left"><span class="pill">❤️ <b id="hp">100</b></span><span class="pill">👥 <b id="alive">9</b></span><span class="pill">⏱ <b id="timer">00:00</b></span></div><div class="hud-right"><span class="pill" id="zoneStatus">ZONE: SAFE</span><span class="pill">🔫 <b id="weaponName">SCAR</b></span></div></div>
+<div id="gameWrap"><canvas id="gameCanvas" width="960" height="600" aria-label="Battle arena game"></canvas><div id="toast" class="toast"></div><div id="aimDot"></div></div>
+<div class="mobile-controls"><div id="stickArea" class="stick-area"><div id="stick" class="stick"></div></div><div class="action-controls"><button id="reloadBtn" class="control">↻<small>RELOAD</small></button><button id="fireBtn" class="fire">●<small>FIRE</small></button><button id="switchBtn" class="control">⇄<small>WEAPON</small></button></div></div>
+<div class="game-bottom"><span id="ammo">AMMO 30 / 120</span><button id="pauseBtn" class="secondary">Ⅱ PAUSE</button><button id="leaveBtn" class="secondary">EXIT</button></div>
+</section>
+<section id="result" class="screen"><div class="result-card"><div id="resultIcon" class="result-icon">🏆</div><div class="eyebrow">MATCH COMPLETE</div><h2 id="resultTitle">BOOYAH!</h2><p id="resultText">You survived the island.</p><div class="result-stats"><div><b id="rKills">0</b><small>ELIMINATIONS</small></div><div><b id="rCoins">0</b><small>COINS EARNED</small></div><div><b id="rTime">00:00</b><small>SURVIVAL TIME</small></div></div><button id="againBtn" class="primary">↻ PLAY AGAIN</button><button id="menuBtn" class="secondary wide">BACK TO LOBBY</button></div></section>
+</main><div id="modal" class="modal hidden"><div class="modal-card"><button id="closeModal" class="close">✕</button><h2>HOW TO PLAY</h2><p><b>Move:</b> use the left joystick or WASD / arrow keys.</p><p><b>Aim & shoot:</b> tap FIRE on mobile; click/tap the arena to aim. On computer, aim with mouse and hold left-click to shoot.</p><p><b>Reload:</b> tap RELOAD or press R. <b>Weapon:</b> tap WEAPON or press Q.</p><p><b>Survive:</b> defeat rival bots and keep an eye on the shrinking safe zone. Outside the zone, your health drains.</p><p class="muted">This is an original offline prototype, not Free Fire and not connected to online matchmaking.</p><button id="modalOk" class="primary">GOT IT</button></div></div>
+<footer>FIRE IN STYLE <span>•</span> OFFLINE BUILD 1.0</footer>
+</div><script src="game.js"></script><script>if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});</script>
+</body></html>
